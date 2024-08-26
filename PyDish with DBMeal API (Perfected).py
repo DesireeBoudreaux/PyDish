@@ -58,7 +58,6 @@ def parse_recipes(data):
             'ingredients': ingredients,
             'link': link
         })
-    # Debugging statements
     print(f"Parsed Recipes: {recipes}")  
     return recipes
 
