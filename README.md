@@ -1,33 +1,29 @@
 # 🍽️ PyDish Recipe Scraper
 
-Welcome to **PyDish**! This app is your culinary companion, helping you discover delicious recipes based on your cravings. Just tell us what you’re in the mood for, and PyDish will fetch mouth-watering recipes from TheMealDB API and display them in a user-friendly interface. Bon appétit! 🍴
+Welcome to **PyDish**! This app is your culinary companion, helping you discover delicious recipes based on your cravings. Just tell us what you’re in the mood for, and PyDish will fetch mouth-watering recipes from TheMealDB API and display them in a user-friendly interface.🍴
 
 ## ✨ Features
-- **🔍 Search Recipes**: Enter a dish name and get a list of scrumptious recipes.
+- **🔍 Search Recipes**: Enter a dish name and get a scrumptious recipe.
 - **📋 Detailed Recipe Information**: View ingredients, instructions, and source links for each recipe.
 - **🌄 Beautiful Background**: Enjoy a visually appealing background image from Unsplash.
 
 ## 🚀 Installation
 1. **Clone the repository**:
-    ```bash
     git clone https://github.com/desireeboudreaux/pydish.git
-    cd pydish
-    ```
-2. **Install the required packages**:
-    ```bash
+cd pydish
+
+3. **Install the required packages**:
     pip install requests pillow tkinter
-    ```
-3. **Run the application**:
-    ```bash
+   
+5. **Run the application**:
     python pydish.py
-    ```
 
 ## 🛠️ How It Works
-1. **Download Background Image**: The app downloads a stunning background image from Unsplash.
+1. **Download Background Image**: The app downloads a delicious looking background image from Unsplash.
 2. **Set Background**: The image is set as the backdrop for the Tkinter window.
 3. **User Input**: Enter the name of a dish you’re craving.
 4. **Fetch Recipes**: The app fetches recipes from TheMealDB API based on your input.
-5. **Display Results**: The app showcases the recipes, including title, category, area, ingredients, instructions, and source link.
+5. **Display Results**: The app will showcase the recipe, including title, category, area, ingredients, instructions, and source link.
 
 ## 🧑‍💻 Code Overview
 - `download_image(url, filename)`: Downloads an image from a given URL and saves it locally.
