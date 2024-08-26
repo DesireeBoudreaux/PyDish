@@ -36,19 +36,26 @@ def get_recipes(query):
 def parse_recipes(data):
     if data is None:
         return []
+    
     recipes = []
     for item in data:
-        title = item['strMeal']
-        category = item['strCategory']
-        area = item['strArea']
-        instructions = item['strInstructions']
+        title = item.get('strMeal', 'No title')
+        category = item.get('strCategory', 'No category')
+        area = item.get('strArea', 'No area')
+        instructions = item.get('strInstructions', 'No instructions')
         ingredients = []
+
+        # Collect ingredients and measures
         for i in range(1, 21):
-            ingredient = item[f'strIngredient{i}']
-            measure = item[f'strMeasure{i}']
+            ingredient = item.get(f'strIngredient{i}')
+            measure = item.get(f'strMeasure{i}')
             if ingredient:
                 ingredients.append(f"{ingredient} - {measure}")
-        link = item['strSource'] if item['strSource'] else f"https://www.themealdb.com/meal/{item['idMeal']}"
+
+        # Put together the link
+        link = item.get('strSource', f"https://www.themealdb.com/meal/{item['idMeal']}")
+
+        # Put together the recipe list
         recipes.append({
             'title': title,
             'category': category,
@@ -57,6 +64,8 @@ def parse_recipes(data):
             'ingredients': ingredients,
             'link': link
         })
+
+    # Print and return the parsed recipes
     print(f"Parsed Recipes: {recipes}")  
     return recipes
 
