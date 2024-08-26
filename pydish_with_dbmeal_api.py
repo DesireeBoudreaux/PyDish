@@ -102,7 +102,7 @@ def display_results(recipes):
             separator = tk.Label(results_frame, text="-"*50, font=('Helvetica', 12), bg='black', fg='white')
             separator.pack()
 
-# User input for searching recipes
+# Get the user input for searching recipes
 def user_input():
     user_input = entry.get()
     data = get_recipes(user_input)
