@@ -52,10 +52,10 @@ def parse_recipes(data):
             if ingredient:
                 ingredients.append(f"{ingredient} - {measure}")
 
-        # Put together the link
+        # reate the link to the recipe
         link = item.get('strSource', f"https://www.themealdb.com/meal/{item['idMeal']}")
 
-        # Put together the recipe list
+        # Append the recipe to the list
         recipes.append({
             'title': title,
             'category': category,
@@ -65,7 +65,7 @@ def parse_recipes(data):
             'link': link
         })
 
-    # Print and return the parsed recipes
+    # Print and return the recipes
     print(f"Parsed Recipes: {recipes}")  
     return recipes
 
