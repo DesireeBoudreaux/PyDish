@@ -52,7 +52,7 @@ def parse_recipes(data):
             if ingredient:
                 ingredients.append(f"{ingredient} - {measure}")
 
-        # reate the link to the recipe
+        # Create the link to the recipe
         link = item.get('strSource', f"https://www.themealdb.com/meal/{item['idMeal']}")
 
         # Append the recipe to the list
