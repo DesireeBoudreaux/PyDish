@@ -1,13 +1,14 @@
 # Import modules
-import requests
+# Import modules
 import tkinter as tk
+import requests
 from PIL import Image, ImageTk
 
 print("Modules imported")
 
 # Download Unsplash background image
 def download_image(url, filename):
-    response = requests.get(url)
+    response = requests.get(url, timeout=10)
     with open(filename, 'wb') as file:
         file.write(response.content)
 
@@ -21,7 +22,6 @@ def set_background(root, image_path):
 
 # Get recipes from TheMealDB API
 def get_recipes(query):
-    api_key = '1'  # Testing API key
     url = f"https://www.themealdb.com/api/json/v1/1/search.php?s={query}"
     print(f"Getting URL: {url}")  
     response = requests.get(url)
@@ -94,7 +94,7 @@ def display_results(recipes):
             separator = tk.Label(results_frame, text="-"*50, font=('Helvetica', 12), bg='black', fg='white')
             separator.pack()
 
-# User input
+# User input for searching recipes
 def user_input():
     user_input = entry.get()
     data = get_recipes(user_input)
@@ -139,7 +139,6 @@ results_frame.pack(pady=20)
 
 # Run Tkinter loop
 root.mainloop()
-
 
 
 #Example uses
