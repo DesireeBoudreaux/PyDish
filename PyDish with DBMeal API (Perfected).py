@@ -138,7 +138,3 @@ results_frame.pack(pady=20)
 
 # Run Tkinter loop
 root.mainloop()
-
-
-#Example uses
-"""search for desired food ex.: salted caramel, beef wellington, sushi, cookies, alfredo pasta, tacos"""
