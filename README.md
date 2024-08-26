@@ -1,15 +1,11 @@
-# PyDish
-Python Recipe Finder using TheMealDB API-  Search and display recipes in a Tkinter window.
-
-
 PyDish Recipe Scraper
-Welcome to PyDish! This app helps you find delicious recipes based on your cravings. Simply enter what you’re in the mood for, and PyDish will fetch recipes from TheMealDB API and display them in a user-friendly interface.
+
+Welcome to PyDish! This app helps you find delicious recipes based on your cravings. Just tell us what you’re in the mood for, and PyDish will fetch recipes from TheMealDB API and display them in a user-friendly interface.
 
 Features
 Search Recipes: Enter a dish name and get a list of recipes.
 Detailed Recipe Information: View ingredients, instructions, and source links for each recipe.
 Beautiful Background: Enjoy a visually appealing background image from Unsplash.
-
 Installation
 Clone the repository:
 git clone https://github.com/desireeboudreaux/pydish.git
@@ -43,6 +39,5 @@ Tkinter: For creating the graphical user interface.
 
 Contributing
 Feel free to fork this repository and contribute by submitting pull requests. Any improvements or bug fixes are welcome and appreciated!
-
 
 
