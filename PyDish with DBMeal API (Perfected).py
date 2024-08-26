@@ -142,5 +142,5 @@ root.mainloop()
 
 
 
-#Exaple uses
+#Example uses
 """search for desired food ex.: salted caramel, beef wellington, sushi, cookies, alfredo, tacos"""
