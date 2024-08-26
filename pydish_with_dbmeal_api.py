@@ -45,7 +45,7 @@ def parse_recipes(data):
         instructions = item.get('strInstructions', 'No instructions')
         ingredients = []
 
-        # Collect ingredients and measures
+        # Collect ingredients and measurements
         for i in range(1, 21):
             ingredient = item.get(f'strIngredient{i}')
             measure = item.get(f'strMeasure{i}')
