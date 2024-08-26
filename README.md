@@ -42,7 +42,7 @@ Pillow: For handling and displaying images.
 Tkinter: For creating the graphical user interface.
 
 Contributing
-Feel free to fork this repository and contribute by submitting pull requests. Any improvements or bug fixes are welcome!
+Feel free to fork this repository and contribute by submitting pull requests. Any improvements or bug fixes are welcome and appreciated!
 
 
 
