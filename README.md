@@ -6,6 +6,9 @@ Welcome to **PyDish**! This app is your culinary companion, helping you discover
 - **🔍 Search Recipes**: Enter a dish name and get a scrumptious recipe.
 - **📋 Detailed Recipe Information**: View ingredients, instructions, and source links for each recipe.
 - **🌄 Beautiful Background**: Enjoy a visually appealing background image from Unsplash.
+  
+## 🎥 PyDish in Action:
+- https://github.com/user-attachments/assets/d057b6a8-54d3-4448-8ebd-8b74681dbb82
 
 ## 🚀 Installation
 1. **Clone the repository**:
