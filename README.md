@@ -27,6 +27,19 @@ cd pydish
 3. **User Input**: Enter the name of a dish you’re craving.
 4. **Fetch Recipes**: The app fetches recipes from TheMealDB API based on your input.
 5. **Display Results**: The app will showcase the recipe, including title, category, area, ingredients, instructions, and source link.
+   
+🔍 Search Rules and Examples
+Search Rules:
+Enter the name of a dish or ingredient.
+Use specific names for better results (e.g., “Chicken Curry” instead of just “Chicken”).
+If multiple recipes are available, scroll down to see all results.
+Examples:
+Example 1: Searching for “Cheesecake”
+!Salted Caramel Cheesecake
+Example 2: Searching for “Curry”
+!Thai Green Curry
+!Katsu Chicken Curry
+!Nutty Chicken Curry
 
 ## 🧑‍💻 Code Overview
 - `download_image(url, filename)`: Downloads an image from a given URL and saves it locally.
