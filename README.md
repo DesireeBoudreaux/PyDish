@@ -16,10 +16,10 @@ Welcome to **PyDish**! This app is your culinary companion, helping you discover
 cd pydish
 
 3. **Install the required packages**:
-    pip install requests pillow tkinter
+    pip install requests pillow 
    
 5. **Run the application**:
-    python pydish.py
+    pydish_with_dbmeal_api.py
 
 ## 🛠️ How It Works
 1. **Download Background Image**: The app downloads a delicious looking background image from Unsplash.
@@ -61,4 +61,4 @@ Example 2: Searching for “Curry”
 Feel free to fork this repository and contribute by submitting pull requests. Any improvements or bug fixes are welcome and appreciated!
 
  
-Happy cooking with PyDish! 🍲
+Happy cooking with PyDish! 🍪
