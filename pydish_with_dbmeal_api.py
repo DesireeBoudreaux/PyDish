@@ -30,8 +30,7 @@ def set_background(root, image_path):
 
 # Function to fetch recipes from TheMealDB API
 """Fetches recipes from TheMealDB."""
-def fetch_recipes(query):
-    api_key = '1'  # Test API key
+def fetch_recipes(query, api_key = '1'):
     url = f"https://www.themealdb.com/api/json/v1/1/search.php?s={query}"
     print(f"Fetching URL: {url}")  # Debugging statement
     try:
