@@ -6,6 +6,7 @@ from PIL import Image, ImageTk
 print("Modules imported")
 
 # Function to download Unsplash background image
+"""Downloads an appetizing image from Unsplash."""
 def download_image(url, filename):
     try:
         response = requests.get(url)
@@ -16,6 +17,7 @@ def download_image(url, filename):
         print(f"Error downloading image: {e}")
 
 # Function to set the Unsplash background image onto Tkinter
+"""Sets the background in the Tkinter window."""
 def set_background(root, image_path):
     try:
         image = Image.open(image_path)
@@ -27,6 +29,7 @@ def set_background(root, image_path):
         print(f"Error setting background: {e}")
 
 # Function to fetch recipes from TheMealDB API
+"""Fetches recipes from TheMealDB."""
 def fetch_recipes(query):
     api_key = '1'  # Test API key
     url = f"https://www.themealdb.com/api/json/v1/1/search.php?s={query}"
@@ -41,6 +44,7 @@ def fetch_recipes(query):
         return None
 
 # Function to parse JSON response and extract recipes
+"""Parses JSON responses and extracts the recipes."""
 def parse_recipes(data):
     if data is None:
         return []
@@ -53,6 +57,7 @@ def parse_recipes(data):
     return recipes
 
 # Function to display the results in the Tkinter window
+"""Displays results in the Tkinter window."""
 def display_results(recipes):
     # Clear previous results
     for widget in results_frame.winfo_children():
@@ -67,6 +72,7 @@ def display_results(recipes):
             result_label.pack()
 
 # Function for user input
+"""Asks for user input for the desired recipe."""
 def user_input():
     user_input = entry.get()
     data = fetch_recipes(user_input)
