@@ -22,7 +22,7 @@ def set_background(root, image_path):
     background_label.place(relwidth=1, relheight=1)
 
 # Get recipes from TheMealDB API
-"""Fetches recipes from TheMealDB API"""
+"""Get recipes from TheMealDB API"""
 def get_recipes(query):
     api_key = '1' 
     url = f"https://www.themealdb.com/api/json/v1/1/search.php?s={query}"
