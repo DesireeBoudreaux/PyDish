@@ -18,13 +18,13 @@ def set_background(root, image_path):
     image = Image.open(image_path)
     photo = ImageTk.PhotoImage(image)
     background_label = tk.Label(root, image=photo)
-    background_label.image = photo  # Keep reference & avoid garbage
+    background_label.image = photo
     background_label.place(relwidth=1, relheight=1)
 
 # Get recipes from TheMealDB API
 """Fetches recipes from TheMealDB API"""
 def get_recipes(query):
-    api_key = '1'  # Testing API key
+    api_key = '1' 
     url = f"https://www.themealdb.com/api/json/v1/1/search.php?s={query}"
     print(f"Getting URL: {url}")  
     response = requests.get(url)
