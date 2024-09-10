@@ -16,9 +16,8 @@ Welcome to **PyDish**! This app is your culinary companion, helping you discover
 cd pydish
 
 3. **Install the required packages**:
-    pip install requests
-    pip install pillow
-    pip install tk
+    pip install requests pillow
+    
    
    
 5. **Run the application**:
