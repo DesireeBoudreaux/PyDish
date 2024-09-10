@@ -3,7 +3,7 @@
 Welcome to **PyDish**! This app is your culinary companion, helping you discover delicious recipes based on your cravings. Just tell us what you’re in the mood for, and PyDish will fetch mouth-watering recipes from TheMealDB API and display them in a user-friendly interface.🍴
 
 ## ✨ Features
-- **🔍 Search Recipes**: Enter a dish name and get a scrumptious recipe.
+- **🔍 Search Recipes**: Enter a dish name and get a delicious recipe.
 - **📋 Detailed Recipe Information**: View ingredients, instructions, and source links for each recipe.
 - **🌄 Beautiful Background**: Enjoy a visually appealing background image from Unsplash.
   
