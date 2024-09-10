@@ -38,7 +38,7 @@ def get_recipes(query):
         return None
 
 # Parse JSON response & extract recipes
-"""Parses the recipe"""
+"""Parses Json & extracts the recipe"""
 def parse_recipes(data):
     if data is None:
         return []
