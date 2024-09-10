@@ -13,7 +13,7 @@ def download_image(url, filename):
         file.write(response.content)
 
 # Set the Unsplash background image onto Tkinter
-"""Sets the background in the Tkinte window"""
+"""Sets the background in the Tkinter window"""
 def set_background(root, image_path):
     image = Image.open(image_path)
     photo = ImageTk.PhotoImage(image)
