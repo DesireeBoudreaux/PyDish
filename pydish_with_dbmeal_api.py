@@ -33,7 +33,7 @@ def get_recipes(query):
         data = response.json()
         return data['meals']
     else:
-        print("Failed to retrieve the data.")
+        print("No data found.")
         return None
 
 # Parse JSON response & extract recipes
