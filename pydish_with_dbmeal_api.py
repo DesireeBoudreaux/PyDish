@@ -3,6 +3,7 @@ import requests
 import tkinter as tk
 from PIL import Image, ImageTk
 
+
 print("Modules imported")
 
 # Download Unsplash background image
@@ -13,18 +14,18 @@ def download_image(url, filename):
         file.write(response.content)
 
 # Set the Unsplash background image onto Tkinter
-"""Sets the background in the Tkinter window"""
+"""Sets the background in the Tkinte window"""
 def set_background(root, image_path):
     image = Image.open(image_path)
     photo = ImageTk.PhotoImage(image)
     background_label = tk.Label(root, image=photo)
-    background_label.image = photo
+    background_label.image = photo  # Keep reference & avoid garbage
     background_label.place(relwidth=1, relheight=1)
 
 # Get recipes from TheMealDB API
-"""Get recipes from TheMealDB API"""
+"""Fetches recipes from TheMealDB API"""
 def get_recipes(query):
-    api_key = '1' 
+    api_key = '1'  
     url = f"https://www.themealdb.com/api/json/v1/1/search.php?s={query}"
     print(f"Getting URL: {url}")  
     response = requests.get(url)
@@ -33,16 +34,16 @@ def get_recipes(query):
         data = response.json()
         return data['meals']
     else:
-        print("No data found.")
+        print("Failed to retrieve the data.")
         return None
 
 # Parse JSON response & extract recipes
 """Parses the recipe"""
-def parse_recipes(recipes):
-    if recipes is None:
+def parse_recipes(data):
+    if data is None:
         return []
     recipes = []
-    for item in recipes:
+    for item in data:
         title = item['strMeal']
         category = item['strCategory']
         area = item['strArea']
