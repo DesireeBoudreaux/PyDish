@@ -38,11 +38,11 @@ def get_recipes(query):
 
 # Parse JSON response & extract recipes
 """Parses the recipe"""
-def parse_recipes(data):
-    if data is None:
+def parse_recipes(recipes):
+    if recipes is None:
         return []
     recipes = []
-    for item in data:
+    for item in recipes:
         title = item['strMeal']
         category = item['strCategory']
         area = item['strArea']
