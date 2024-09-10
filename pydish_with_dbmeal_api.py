@@ -19,7 +19,7 @@ def set_background(root, image_path):
     image = Image.open(image_path)
     photo = ImageTk.PhotoImage(image)
     background_label = tk.Label(root, image=photo)
-    background_label.image = photo  # Keep reference & avoid garbage
+    background_label.image = photo
     background_label.place(relwidth=1, relheight=1)
 
 # Get recipes from TheMealDB API
@@ -70,7 +70,6 @@ def parse_recipes(data):
 # Display the results in the Tkinter window
 def display_results(recipes):
     """Displays recipes in the Tkinter window"""
-    # Clear results
     for widget in results_frame.winfo_children():
         widget.destroy()
     # Display results
@@ -109,7 +108,7 @@ def user_input():
     recipes = parse_recipes(data)
     display_results(recipes)
 
-# Downloading background image from Unsplash
+# Downloading background from Unsplash
 image_url = "https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 download_image(image_url, "background.jpg")
 
@@ -124,26 +123,26 @@ screen_height = root.winfo_screenheight()
 # Set Tkinter window to the screen size
 root.geometry(f"{screen_width}x{screen_height}")
 
-# Set background image
+# Set background to Unsplash photo
 set_background(root, "background.jpg")
 
-# Create user interface
+# Create the interface
 frame = tk.Frame(root, bg='black')
 frame.pack(pady=20)
 
 label = tk.Label(frame, text="What are you craving?", font=('Helvetica', 16), fg='black', bg='#479254')
 label.pack(pady=10)
 
-# Create widget with a border
+# Create the widget
 entry = tk.Entry(frame, font=('Helvetica', 14), highlightbackground='black', highlightthickness=2)
 entry.pack(pady=10)
 
 button = tk.Button(frame, text="Search", font=('Helvetica', 14), bg='#479254', fg='black', command=user_input)
 button.pack(pady=10)
 
-# Create display for results 
+# Create display
 results_frame = tk.Frame(root, bg='black')
 results_frame.pack(pady=20)
 
-# Run Tkinter loop
+# Run Tkinter
 root.mainloop()
