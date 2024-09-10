@@ -72,7 +72,6 @@ def display_results(recipes):
     """Displays recipes in the Tkinter window"""
     for widget in results_frame.winfo_children():
         widget.destroy()
-    # Displays recipe results
     if not recipes:
         result_label = tk.Label(results_frame, text="Sorry I couldn't find that recipe.", font=('Helvetica', 12), bg='black', fg='white')
         result_label.pack()
